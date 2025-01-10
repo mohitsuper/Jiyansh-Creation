@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cagliostro&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cagliostro&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 @font-face{
     font-family:main-font;
     src:url('/Asstes/Fonts/NewBaskervilleStd-Bold.tff');
@@ -11,7 +14,7 @@
 }
 
 *{
-    font-family: "Cagliostro", serif;
+    font-family: "Baskervville", serif;
     font-weight: 400;
     font-style: normal;  
     padding: 0;
@@ -47,6 +50,13 @@ nav a{
     top:0;
     left: 0;
 }
+
+.Heaging-c{
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+  }
 .nav-container a{
     position: relative;
     top: 0;
@@ -134,7 +144,7 @@ bottom: 2px;
   top: 100%;
   z-index: -3;
   background: #000;
-  left: 0;
+  left: 50%;
   transition-delay: 0.3s;
   transition: 0.5s all;
   width: 100%;
@@ -143,6 +153,7 @@ bottom: 2px;
 }
 .head-btn:hover{
     color: #fff;
+    left: 0;
 }
 .head-btn:hover span svg path{
     color: #fff;
@@ -150,5 +161,6 @@ bottom: 2px;
 }
 .head-btn:hover::after{
     top: 0;
+    left: 0;
     border-radius: 0;
 }
