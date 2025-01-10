@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face{
+    font-family:main-font;
+    src:url('/Asstes/Fonts/NewBaskervilleStd-Bold.tff');
+}
+@font-face {
+    font-family: "heading";
+    src: url('/Asstes/Fonts/NewBaskervilleStd-Bold.woff');
+}
+
+*{
+    font-family: "Cagliostro", serif;
+    font-weight: 400;
+    font-style: normal;  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+.head-text-headin{
+    line-height: 4.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.head-p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+nav a{
+    font-weight: 400;
+}
+.nav-container{
+    height: 30px;
+    /* background: red; */
+    overflow: hidden;
+    position: relative;
+    top:0;
+    left: 0;
+}
+.nav-container a{
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.3s all;
+}
+/* .nav-container a::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    transition: 0.3s all;
+    opacity:0 ;
+    left:-100%;
+    bottom: -0.5px;
+    height: 2px;
+    background: #000;
+    width: 100%;
+} */
+.nav-container .link-overlay{
+    bottom: -100%;
+    position: absolute;
+    transition: 0.3s all;
+}
+.nav-container .link-overlay::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    transition: 0.3s all;
+    opacity:0 ;
+    left:100%;
+    height: 2px;
+    background: #000;
+    width: 100%;
+}
+.nav-container:hover a{
+   top:-100%;
+}
+.nav-container:hover a::after{
+    left: 0;
+    opacity: 1;
+    transition-delay: ease-out 0.3s;
+}
+.nav-container:hover .link-overlay{
+bottom: 2px;
+}
+.nav-container:hover .link-overlay::after{
+    left: 0;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+.polyrein{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.nav-overlay{
+    display: flex;
+    top: 500px;
+    left: 30%;
+    text-align: left;
+    justify-content: flex-start;
+    width: 250px;
+    font-weight: 400;
+    opacity: 0;
+    transition: 0.3s all;
+    position: absolute;
+    flex-direction: column;
+}
+.nav-overlay a{
+    padding-left: 2rem;
+    padding-top: 1.2rem;
+    font-size: 1.8rem;
+}
+
+
+.head-btn{
+    position: relative;
+    z-index: 1;
+    color: #000;
+    overflow: hidden;
+}
+.head-btn::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  z-index: -3;
+  background: #000;
+  left: 0;
+  transition-delay: 0.3s;
+  transition: 0.5s all;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.head-btn:hover{
+    color: #fff;
+}
+.head-btn:hover span svg path{
+    color: #fff;
+    fill: #fff;
+}
+.head-btn:hover::after{
+    top: 0;
+    border-radius: 0;
+}
